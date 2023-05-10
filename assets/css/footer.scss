@@ -1,0 +1,66 @@
+/*repeat from main mixin and font */
+
+@mixin font_family($family, $weight) {
+    font-family: '#{$family}', sans-serif;
+    font-weight: $weight;
+}
+$lato: 'Lato';
+$RedHatDisplay: 'RedHatDisplay';
+
+
+@mixin font($size-px, $lh) {
+    font-size: ($size-px / 16) * 1rem;
+    line-height: $lh / $size-px;
+}
+$black-color: #000;
+$text-color: #565656;
+
+
+/*== footer style start ==*/
+.footer {
+    background-color: #F4F4F4;
+    padding: 70px 0 30px;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .h2 {
+            color: $black-color;
+            @include font_family($RedHatDisplay, 400);
+            @include font(48, 64);
+            letter-spacing: 2.4px;
+            margin-bottom: 30px;
+        }
+        .contact-info a {
+            color: $black-color;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .copyRight {
+            width: 100%;
+            text-align: center;
+            @include font(12, 18);
+        }
+    }
+    .sotial-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 23px;
+        a {
+            display: flex;
+            border: 1px solid $text-color;
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                background-color: $text-color;
+                svg path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+/*== footer style end ==*/
