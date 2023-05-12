@@ -1,0 +1,144 @@
+/*---------------------CASE first two sections-----------------------*/
+.container {
+  width: min(90%, 1120px);
+  margin: 0 auto;
+}
+
+.section-first.case {
+  padding-top: 90px;
+}
+.section-first .section-img {
+  margin-bottom: 130px;
+}
+
+.section-second .section-img {
+  margin-bottom: 50px;
+}
+
+.case {
+  font-family: "Lato", sans-serif;
+  font-size: 1.1875rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.055em;
+  color: #565656;
+  padding-bottom: 135px;
+}
+.case .sub-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5em;
+  color: #000;
+  margin-bottom: 47px;
+}
+.case .h1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #000;
+  margin-bottom: 64px;
+}
+.case .section-details {
+  display: flex;
+  align-items: flex-start;
+}
+.case .section-details .details-text {
+  max-width: 544px;
+}
+.case .details-title {
+  margin-bottom: 44px;
+}
+.case .title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.4375rem;
+  line-height: 2.125rem;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: 0.1em;
+}
+.case .second.title {
+  margin-bottom: 44px;
+}
+.case .left-content {
+  flex-basis: 66%;
+}
+.case .right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 47px;
+  padding-left: 2.5%;
+}
+.case .right-content .info {
+  margin-top: 1px;
+}
+.case .details-text p {
+  margin-bottom: 33px;
+}
+.case a {
+  font-family: "Lato", sans-serif;
+  font-size: 1.1875rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.065em;
+  color: #565656;
+  text-decoration: none;
+}
+.case a::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  transform: translateX(16%);
+}
+.case a:hover::after {
+  background-color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .section-first.case {
+    padding-top: 29px;
+  }
+  .section-first .section-img {
+    margin-bottom: 48px;
+  }
+
+  .section-second .section-img {
+    margin-bottom: 50px;
+  }
+
+  .case {
+    padding-bottom: 72px;
+  }
+  .case .h1 {
+    font-size: 2.0625rem;
+    line-height: 3.125rem;
+    margin-bottom: 52px;
+  }
+  .case .sub-title {
+    margin-bottom: 38px;
+  }
+  .case .section-details {
+    flex-direction: column;
+  }
+  .case .details-title {
+    margin-bottom: 20px;
+  }
+  .case .left-content {
+    margin-bottom: 29px;
+  }
+  .case .right-content {
+    padding-left: 0;
+  }
+  .case .second.title {
+    margin-bottom: 40px;
+  }
+}
+/*---------------------#CASE first two sections-----------------------*/
