@@ -42,3 +42,14 @@ body {
   width: min(90%, 1170px);
   margin-inline: auto;
 }
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 35px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}

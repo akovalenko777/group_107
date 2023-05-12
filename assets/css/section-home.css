@@ -15,14 +15,83 @@
   top: 100px;
   width: 60%;
 }
+@media only screen and (max-width: 900px) {
+  .campaign .container .h1 {
+    top: 50px;
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .campaign .container .h1 {
+    font-size: 2.25rem;
+    line-height: 1.3888888889;
+    top: 30px;
+    left: 35px;
+    width: 85%;
+    letter-spacing: 1.8px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .campaign .container .h1 {
+    font-size: 1.875rem;
+    line-height: 1.6666666667;
+    top: 70px;
+    left: 10px;
+    letter-spacing: 1.6px;
+  }
+}
+.campaign .container .img-holder img {
+  aspect-ratio: 2.4;
+}
+@media only screen and (max-width: 480px) {
+  .campaign .container .img-holder img {
+    aspect-ratio: 0.64;
+  }
+}
 
 .two-columns.bottom-sections {
   display: flex;
   justify-content: space-between;
-  padding: 90px 0 58px;
+  padding-top: 90px;
+  padding-bottom: 58px;
+}
+@media only screen and (max-width: 768px) {
+  .two-columns.bottom-sections {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    gap: 70px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .two-columns.bottom-sections {
+    gap: 51px;
+  }
 }
 .two-columns.bottom-sections > div {
   width: 40%;
+}
+@media only screen and (max-width: 900px) {
+  .two-columns.bottom-sections > div {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .two-columns.bottom-sections > div {
+    width: 90%;
+  }
+  .two-columns.bottom-sections > div.text-box {
+    align-self: flex-end;
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .two-columns.bottom-sections > div {
+    width: 100%;
+  }
+  .two-columns.bottom-sections > div.text-box {
+    text-align: left;
+  }
 }
 .two-columns.bottom-sections .big-text {
   color: #000;
@@ -32,9 +101,20 @@
   line-height: 1.652173913;
   letter-spacing: 2.2px;
 }
+@media only screen and (max-width: 480px) {
+  .two-columns.bottom-sections .big-text {
+    font-size: 1.5rem;
+    line-height: 1.6666666667;
+  }
+}
 .two-columns.bottom-sections .arow-link {
   position: relative;
   padding-bottom: 30px;
+}
+@media only screen and (max-width: 480px) {
+  .two-columns.bottom-sections .arow-link {
+    padding-bottom: 26px;
+  }
 }
 .two-columns.bottom-sections .arow-link::after {
   content: "";
@@ -50,6 +130,16 @@
   font-size: 1.1875rem;
   line-height: 1.6842105263;
   letter-spacing: 0.7px;
+}
+@media only screen and (max-width: 768px) {
+  .two-columns.bottom-sections p {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .two-columns.bottom-sections p {
+    letter-spacing: 0.2px;
+  }
 }
 
 /*== main section end ==*/

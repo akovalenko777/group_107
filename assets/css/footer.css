@@ -4,11 +4,29 @@
   background-color: #F4F4F4;
   padding: 70px 0 30px;
 }
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 .footer .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 768px) and (max-width: 480px) {
+  .footer .container {
+    gap: 25px;
+  }
 }
 .footer .container .h2 {
   color: #000;
@@ -17,18 +35,53 @@
   font-size: 3rem;
   line-height: 1.3333333333;
   letter-spacing: 2.4px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
+}
+@media only screen and (max-width: 768px) {
+  .footer .container .h2 {
+    margin-bottom: 21px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer .container .h2 {
+    font-size: 2rem;
+    line-height: 1.3125;
+    letter-spacing: 2.1px;
+    margin-bottom: 19px;
+  }
 }
 .footer .container .contact-info a {
   color: #000;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  letter-spacing: 1.7px;
+}
+@media only screen and (max-width: 480px) {
+  .footer .container .contact-info a {
+    font-size: 1.125rem;
+    line-height: 1.6666666667;
+    margin-bottom: 15px;
+  }
 }
 .footer .container .copyRight {
   width: 100%;
   text-align: center;
-  font-size: 0.75rem;
-  line-height: 1.5;
+  font-size: 0.875rem;
+  line-height: 1.2857142857;
+  margin-top: 17px;
+  letter-spacing: 0.2px;
+}
+@media only screen and (max-width: 768px) {
+  .footer .container .copyRight {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer .container .copyRight {
+    font-size: 1rem;
+    line-height: 1.6875;
+    padding: 14px 14px 0;
+  }
 }
 .footer .sotial-links {
   display: flex;
