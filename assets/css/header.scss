@@ -1,0 +1,156 @@
+/*repeat from main mixin */
+
+@mixin font($size-px, $lh) {
+    font-size: ($size-px / 16) * 1rem;
+    line-height: $lh / $size-px;
+}
+$black-color: #000;
+$text-color: #565656;
+/*== header start ==*/
+.header {
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    .container {
+        height: 100px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 65px;
+        @media only screen and (max-width: 900px) {
+            gap: 20px;
+        }
+        @media only screen and (max-width: 768px) {
+            height: 60px;
+        }
+        @media only screen and (max-width: 480px) {
+            gap: 0;
+        }
+        .logo {
+            padding-top: 15px;
+            @media only screen and (max-width: 768px) {
+                flex-grow: 1;
+                 img {
+                    width: auto;
+                    height: auto;
+                 }
+            }
+        }
+        nav {
+            flex: 1 0 auto;
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
+            ul {
+                display: flex;
+                gap: 42px;
+                justify-content: flex-end;
+                @media only screen and (max-width: 900px) {
+                    gap: 20px;
+                }
+            }
+            a {
+                display: inline-block;
+                position: relative;
+                text-transform: uppercase;
+                @include font(14, 17);
+                color: $black-color;
+                letter-spacing: 3.6px;
+                &::after {
+                    content: '';
+                    width: 0;
+                    height: 1px;
+                    background-color: #000;
+                    position: absolute;
+                    bottom: -3px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all .3s ease;
+                }
+                &:hover, &.active {
+                    &::after {
+                    width: 70%; 
+                    }
+                }
+            }
+        }
+        .btn.search {
+            border: 0;
+            background: none;
+            cursor: pointer;
+            padding: 15px 0 15px 15px;
+            @media only screen and (max-width: 768px) {
+                width: 40px;
+                padding-right: 4px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+main {
+  padding-top: 100px;
+  @media only screen and (max-width: 768px) {
+    padding-top: 60px;
+  }
+}
+#hamburger {
+    display: none;
+    @media only screen and (max-width: 768px) {
+        display: block;
+        margin-right: -17px;
+        .hamburger-box {
+            width: 36px;
+            height: 15px;
+            }
+            .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+                width: 34px;
+                height: 2px;
+            }
+    }
+}
+/*== mob menu ==*/
+#mobMainMenu {
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 50px;
+        width: 100%;
+        background: #fff;
+        transition: all 0.5s ease;
+        transform: translateY(-100%);
+        z-index: 11;
+    }
+    &.open {
+        nav {
+            transform: translateY(0);
+        }
+        .overlight {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+    }
+    a {
+        position: relative;
+        text-transform: uppercase;
+        @include font(14, 17);
+        color: $black-color;
+        letter-spacing: 3.6px;
+        padding: 35px 20px;
+        border-bottom: 1px solid $text-color;
+        display: block;
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}
+    /*end*/
+
+/*== header end ==*/

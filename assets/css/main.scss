@@ -1,0 +1,25 @@
+@use "fonts" as *;
+/*==variables==*/
+@mixin font($size-px, $lh) {
+    font-size: ($size-px / 16) * 1rem;
+    line-height: $lh / $size-px;
+}
+$text-color: #565656;
+$black-color: #000;
+/*== main start ==*/
+body {
+    @include font_family($lato, 400);
+    @include font(16, 27);
+    color: $text-color;
+}
+.container {
+    width: min(90%, 1170px);
+    margin-inline: auto;
+    @media only screen and (max-width: 768px) {
+        padding: 0 35px;
+        width: 100%;
+    }
+    @media only screen and (max-width: 480px) {
+        padding: 0 10px;
+    }
+}
