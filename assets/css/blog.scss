@@ -1,0 +1,109 @@
+// SECTION_BLOG
+@use 'styles';
+@use 'fonts';
+$color-text-secondary: #7B7B7B;
+@mixin fz($px_size) {
+  font-size: ($px_size / 16) * 1rem;
+}
+@mixin lh($px_size) {
+  line-height: ($px_size / 16) * 1rem;
+}
+.red-hat {
+  font-family: 'Red Hat Display', sans-serif;
+}
+.h2 {
+  @include fz(48);
+  @include lh(64);
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+.pic--sec-first {
+  aspect-ratio: 57/47;
+}
+.blog-set {
+  display: flex;
+  gap: 30px;
+  .blog-col-left {
+    width: 50%;
+  }
+  .blog-col-right {
+    width: 50%;
+    padding: 85px 70px 85px 0;
+    .small-text {
+      font-family: 'Lato', sans-serif;
+      @include lh(27);
+      letter-spacing: 1.7px;
+      color: $color-text-secondary;
+      margin-bottom: 23px;
+    }
+    .h3 {
+      @include fz(23);
+      @include lh(38);
+      letter-spacing: 2.3px;
+      font-weight: 500;
+      margin-bottom: 9px;
+    }
+    .h3.restriction {
+      max-width: 95%;
+    }
+    .small-text.small-text-second {
+      margin-bottom: 45px;
+    }
+  }
+}
+.paragraph {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  @include lh(28);
+  letter-spacing: 0.9px;
+  max-width: 100%;
+}
+.wrap-arrow {
+  padding-left: 10px;
+  .link-arrow:hover {
+    svg path {
+      fill: #222121;
+    }
+  }
+}
+.set-first {
+  margin-bottom: 50px;
+}
+.set-second {
+  margin-bottom: 90px;
+  .blog-col-right {
+    padding: 85px 0 85px 120px;
+  }
+}
+.blog-set.set-second .blog-col-left {
+  order: 1;
+}
+@media screen and (max-width: 960px) {
+  .blog-set.set-first .blog-col-right {
+    padding: 0;
+  }
+  .blog-set.set-second .blog-col-right {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 580px) {
+  .blog-set.set-first, .blog-set.set-second  {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .blog-set.set-first .blog-col-left {
+    order: 1;
+  }
+  .h2 {
+    text-align: center;
+  }
+  .h3 {
+    @include fz(22);
+    @include lh(36.5);
+
+  }
+  .blog-set .blog-col-right, .blog-set .blog-col-left {
+    width: 100%;
+  }
+}
+// #SECTION_BLOG
