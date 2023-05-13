@@ -1,0 +1,125 @@
+/*repeat from main mixin and font */
+
+@mixin font_family($family, $weight) {
+    font-family: '#{$family}', sans-serif;
+    font-weight: $weight;
+}
+$lato: 'Lato';
+$RedHatDisplay: 'RedHatDisplay';
+
+
+@mixin font($size-px, $lh) {
+    font-size: ($size-px / 16) * 1rem;
+    line-height: $lh / $size-px;
+}
+$black-color: #000;
+$text-color: #565656;
+
+/*== main section start ==*/
+.campaign .container {
+    position: relative;
+    .h1 {
+        color: $black-color;
+        @include font_family($RedHatDisplay, 600);
+        @include font(48, 64);
+        letter-spacing: 2.4px;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 60%;
+        @media only screen and (max-width: 900px) {
+            top: 50px;
+            width: 95%;
+        }
+        @media only screen and (max-width: 768px) {
+            @include font(36, 50);
+            top: 30px;
+            left: 35px;
+            width: 85%;
+            letter-spacing: 1.8px;
+        }
+        @media only screen and (max-width: 480px) {
+            @include font(30, 50);
+            top: 70px;
+            left: 10px;
+            letter-spacing: 1.6px;
+        }
+    }
+    .img-holder img {
+        aspect-ratio: 2.4;
+        @media only screen and (max-width: 480px) {
+            aspect-ratio: 0.64;
+        }
+    }
+}
+.two-columns.bottom-sections {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+    padding-bottom: 58px;
+    @media only screen and (max-width: 768px) {
+        padding-top: 70px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        gap: 70px;
+    }
+    @media only screen and (max-width: 480px) {
+        gap: 51px;
+    }
+    > div {
+        width: 40%;
+        @media only screen and (max-width: 900px) {
+            width: 45%;
+        }
+        @media only screen and (max-width: 768px) {
+            width: 90%;
+            &.text-box {
+                align-self: flex-end;
+                text-align: right;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            width: 100%;
+            &.text-box {
+                text-align: left;
+            }
+        }
+    }
+    .big-text {
+        color: $black-color;
+        @include font_family($RedHatDisplay, 400);
+        @include font(23, 38);
+        letter-spacing: 2.2px;
+        @media only screen and (max-width: 480px) {
+            @include font(24, 40);
+        }
+    }
+    .arow-link {
+        position: relative;
+        padding-bottom: 30px;
+        @media only screen and (max-width: 480px) {
+            padding-bottom: 26px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 24px;
+            height: 12px;
+            background-image: url(../images/arrow-big-link.png);
+        }
+    }
+    p {
+        margin-bottom: 32px;
+        @include font(19, 32);
+        letter-spacing: 0.7px;
+        @media only screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+        @media only screen and (max-width: 480px) {
+            letter-spacing: 0.2px;
+        }
+    }
+}
+/*== main section end ==*/
